@@ -33,7 +33,7 @@ class Mesh:
         """
         
         vertex_num = self.V.shape[0]
-        reval = np.zeros(vertex_num, vertex_num) # N X N Matrix.
+        reval = np.zeros((vertex_num, vertex_num)) # N X N Matrix.
         dims = 3
         # reval_2 = [[] for _ in len(self.F) ] 임시 보류  TODO
 
@@ -64,7 +64,7 @@ class Mesh:
 
         V = self.V
         F = self.F 
-        N, _ = V.Shape
+        N, _ = V.shape
         M, _ = F.shape
 
         reval = [[] for _ in range(N)] # list size is same as vertex row size.
